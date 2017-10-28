@@ -1,0 +1,1 @@
+# Allure2-Junit5-maven
