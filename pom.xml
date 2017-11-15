@@ -52,6 +52,12 @@
         </dependency>
         <dependency>
             <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-junit-platform</artifactId>
+            <version>${allure-junit5.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
             <artifactId>allure-junit5</artifactId>
             <version>${allure-junit5.version}</version>
             <scope>test</scope>
@@ -79,6 +85,12 @@
                             <includeTags>run</includeTags>
                             <excludeTags>integration, regression</excludeTags>
                         </properties>
+                        <systemProperties>
+                            <property>
+                                <name>junit.jupiter.extensions.autodetection.enabled</name>
+                                <value>true</value>
+                            </property>
+                        </systemProperties>
                     </configuration>
                     <dependencies>
                         <dependency>
